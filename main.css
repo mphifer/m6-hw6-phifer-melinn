@@ -7,4 +7,80 @@
 article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
     display:block;
 }
+body {
+	color: #6003C3;
+	background-color: white;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+}
 
+.banner {
+	background-color: #6003C3;
+	padding: 50px 5% 50px 5%;
+}
+
+h1 {
+	color: white;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 3rem;
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+	font-size: 1.3rem;
+	padding-top: 20px;
+}
+
+.box-one {
+	background-color: #FCFF00;
+	border: 10px solid #6003C3;
+	height: 200px;
+  width: 200px;
+	box-shadow: 3px 3px 6px #888888;
+}
+
+.box-two {
+	background-color: #57FFC9;
+	border: 10px solid #6003C3;
+	height: 200px;
+  width: 200px;
+	box-shadow: 3px 3px 6px #888888;
+}
+
+
+.box-three {
+	background-color: #A5FF01;
+	border: 10px solid #6003C3;
+	height: 200px;
+  width: 200px;
+	box-shadow: 3px 3px 6px #888888;
+}
+
+.number-size {
+	font-size: 7rem;
+	text-align: center;
+	font-weight: bold;
+}
+
+.boxes-section {
+	margin: auto;
+	text-align: center;
+}
+
+.boxes-section div {
+	padding: 30px;
+	max-width: 500px;
+	margin: auto;
+	margin-top:40px;
+}
+
+/**********************Start Min-width 475px *******************/
+@media (min-width: 1000px) {
+.boxes-section {
+	display: flex;
+	justify-content: space-around;
+	max-width: 1200px;
+}
+}
