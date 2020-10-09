@@ -1,17 +1,21 @@
-// ////when user hovers over any one of boxes, highlight ALL of boxes
+////when user hovers over any one of boxes, highlight ALL of boxes
+document.getElementById("box-one").addEventListener("mouseover",
+  function() {
+    document.getElementById("box-one").style.backgroundColor = "#FFFFFF";
+  }, false
+);
 
-// document.querySelector("div").addEventListener("mouseover",
-//   function() {
-//     document.querySelector("div").style.backgroundColor = "#FFFFFF";
-//   }, false
-// );
+document.getElementById("box-two").addEventListener("mouseover",
+  function() {
+    document.getElementById("box-two").style.backgroundColor = "#FFFFFF";
+  }, false
+);
 
-// //
-// // var changeColor = document.querySelectorALL('#boxes');
-// //
-// // function() {
-// //   changeColor.style.backgroundColor = "#FFFFFF";
-// // };
+document.getElementById("box-three").addEventListener("mouseover",
+  function() {
+    document.getElementById("box-three").style.backgroundColor = "#FFFFFF";
+  }, false
+);
 
 
 // when a user clicks box #1, message appears with new DOM node
@@ -41,4 +45,11 @@ document.getElementById("box-three").addEventListener("click",
   }, false
 );
 
+
 //any one of the three boxes are clicked,  button that says “Start Over” with an href of “#” appear somewhere on the page by removing a hidden class
+
+document.getElementById("box-one").addEventListener("click", addClassName);
+function addClassName() {
+var element = document.getElementsByClassName("button");
+element.classList.remove("button");
+}
