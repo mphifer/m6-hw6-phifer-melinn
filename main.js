@@ -1,22 +1,19 @@
-////when user hovers over any one of boxes, highlight ALL of boxes
-document.getElementById("box-one").addEventListener("mouseover",
-  function() {
-    document.getElementById("box-one").style.backgroundColor = "#FFFFFF";
-  }, false
-);
+// hovers over any box, highlight all of the boxes with a different background color
+var changeBackground = document.querySelector("#boxes-section");
 
-document.getElementById("box-two").addEventListener("mouseover",
-  function() {
-    document.getElementById("box-two").style.backgroundColor = "#FFFFFF";
-  }, false
-);
+changeBackground.addEventListener('mouseenter', newColor)
+function newColor () {
+  document.getElementById("box-one").style.backgroundColor = "pink";
+  document.getElementById("box-two").style.backgroundColor ="pink";
+  document.getElementById("box-three").style.backgroundColor = "pink";
+};
 
-document.getElementById("box-three").addEventListener("mouseover",
-  function() {
-    document.getElementById("box-three").style.backgroundColor = "#FFFFFF";
-  }, false
-);
-
+changeBackground.addEventListener('mouseleave', oldColor)
+function oldColor () {
+    document.getElementById('box-one').style.backgroundColor = "#FCFF00";
+    document.getElementById('box-two').style.backgroundColor = '#57FFC9';
+    document.getElementById('box-three').style.backgroundColor = '#A5FF01';
+};
 
 // when a user clicks box #1, message appears with new DOM node
 var newPara = document.createElement("p")
