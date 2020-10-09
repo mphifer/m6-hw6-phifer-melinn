@@ -15,6 +15,8 @@ function oldColor () {
     document.getElementById('box-three').style.backgroundColor = '#A5FF01';
 };
 
+
+
 // when a user clicks box #1, message appears with new DOM node
 var newPara = document.createElement("p")
 newPara.innerHTML ='Oooh - so close, but no cigar'
@@ -43,10 +45,29 @@ document.getElementById("box-three").addEventListener("click",
 );
 
 
-//any one of the three boxes are clicked,  button that says “Start Over” with an href of “#” appear somewhere on the page by removing a hidden class
 
-document.getElementById("box-one").addEventListener("click", addClassName);
-function addClassName() {
-var element = document.getElementsByClassName("button");
-element.classList.remove("button");
-}
+//when any one of the three boxes are clicked, button that says “Start Over” with an href of “#”
+
+var newButton = document.createElement("BUTTON")
+newButton.innerHTML = "<a href='#' target='_blank'>Start Over</a>"
+document.getElementById("box-one").addEventListener("click",
+  function() {
+    document.getElementById("place-button").appendChild(newButton);
+  }, false
+);
+
+var newButton = document.createElement("BUTTON")
+newButton.innerHTML = "<a href='#' target='_blank'>Start Over</a>"
+document.getElementById("box-two").addEventListener("click",
+  function() {
+    document.getElementById("place-button").appendChild(newButton);
+  }, false
+);
+
+var newButton = document.createElement("BUTTON")
+newButton.innerHTML = "<a href='#' target='_blank'>Start Over</a>"
+document.getElementById("box-three").addEventListener("click",
+  function() {
+    document.getElementById("place-button").appendChild(newButton);
+  }, false
+);
